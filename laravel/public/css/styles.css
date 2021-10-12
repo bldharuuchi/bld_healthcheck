@@ -1,0 +1,13 @@
+
+.selection-group input[type="radio"]:checked + label .fine_img{
+  border-radius:50%;
+  background-color: #ffff55;
+}
+.selection-group input[type="radio"]:checked + label .flat_img{
+  border-radius:50%;
+  background-color: #33ff33;
+}
+.selection-group input[type="radio"]:checked + label .bad_img{
+  border-radius:50%;
+  background-color: #9999ff;
+}
