@@ -19,7 +19,7 @@
 @foreach($histories as $history)
 
     <tr>
-      <td>{{ $history->created_at->format('Y/m/d') }}</td>
+      <td>{{ $history->created_at->format('Y/m/d　H:i') }}</td>
       <td>{{ $history->status }}</td>
       <td>{{ $history->score }}</td>
       <td>{{ $history->memo }}</td>
@@ -28,5 +28,8 @@
 @endforeach
 </tbody>
 </table>
+
 </div>
+<div class="d-flex justify-content-center">{{ $histories->links() }}</div>
+
 @endsection

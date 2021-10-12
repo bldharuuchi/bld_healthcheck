@@ -14,7 +14,11 @@ class HealthCheckController extends Controller
     {
         $userid = Auth::id();
 
-        $histories = History::where('user_id', $userid)->get()->sortByDesc('created_at');
+        if(History::where('user_id', $userid)->count() >= 10){
+            $histories = History::where('user_id', $userid)->latest()->paginate(10);
+        }else{
+            $histories = History::where('user_id', $userid)->latest()->paginate(History::where('user_id', $userid)->count());
+        }
 
         return view('index', ['histories' => $histories, 'userid' => $userid,]);
     }
