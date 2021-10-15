@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="margin-bottom: 30px;">
     <div class="selection-group d-flex justify-content-center mb-5 mt-5">
     <form method="POST" action="{{ route('record') }}">
       @csrf
@@ -16,7 +16,7 @@
       </label>
     </div>
     <div class="d-flex justify-content-center">
-      <label>点数：<input type="text" name="score" class="" style="width: 480px;" placeholder="0~100の半角数字"></label>
+      <label>点数：<input type="text" name="score" class="" style="width: 480px;" placeholder="0~100の半角数字 (必須)" require></label>
     </div>
     <div class="d-flex justify-content-center mb-3">
       <label>メモ：<input type="textarea" name="memo" class="" style="width: 480px;" placeholder="140字以下"></label>

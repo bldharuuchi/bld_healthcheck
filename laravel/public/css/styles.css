@@ -11,3 +11,24 @@
   border-radius:50%;
   background-color: #9999ff;
 }
+
+@media screen and (max-width: 480px) {
+  #ChartButtonsContainerContainer{
+    width: 100vw !important;
+  }
+	#ChartButtonsContainer{
+    width: 100vw !important;
+    text-align: center !important;
+  }
+  #Chart_default{
+    width: 100vw !important;
+    height: 300px !important;
+  }
+  input{
+    width: 90vw !important;
+  }
+  #CSVButtonContainer{
+    width: 100vw !important;
+    text-align: center !important;
+  }
+}
