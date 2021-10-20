@@ -12,5 +12,6 @@
 */
 
 Auth::routes();
-Route::get('/', 'HealthcheckController@index')->name('index');
-Route::post('record', 'HealthcheckController@record')->name('record')->middleware('auth');
+Route::get('/', 'HealthCheckController@index')->name('index');
+Route::post('record', 'HealthCheckController@record')->name('record')->middleware('auth');
+Route::get('delete', 'HealthCheckController@delete')->name('delete')->middleware('auth');

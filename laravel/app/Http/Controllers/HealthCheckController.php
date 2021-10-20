@@ -47,4 +47,12 @@ class HealthCheckController extends Controller
         return redirect()->route('index');   
     }
 
+    public function delete(Request $request)
+    {
+        $userid = Auth::id();
+        History::where('user_id', $userid)->where('id', $request->id)->delete();
+        return redirect()->route('index');   
+    }
+
+
 }

@@ -44,6 +44,7 @@
     labels.unshift(histories_thirty_json['data'][i]['created_at'].split(" ")[0].split("-")[1] + "/" + histories_thirty_json['data'][i]['created_at'].split(" ")[0].split("-")[2]);
     }
   }
+  
   //全件のスコアを取得
   function get_scores_all(){
     $("#display_tenchart").prop("disabled", false);
@@ -56,6 +57,9 @@
     labels.unshift(histories_all_json[i]['created_at'].split(" ")[0].split("-")[1] + "/" + histories_all_json[i]['created_at'].split(" ")[0].split("-")[2]);
     }
   }
+
+  
+
   //10件表示
   $('#display_tenchart').on('click', function() {
     myChart.destroy();
